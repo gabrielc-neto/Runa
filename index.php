@@ -70,7 +70,7 @@ if (isset($_POST["email"]) && isset($_POST["senha"])) {
             <img src="img/Runa.png" alt="Logo Runas" class="logo">
             <h1>Login</h1>
             <p class="subtitle">Acesse sua conta ou <a href="criar-validar.php">crie uma nova</a></p>
-            <form action="" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> " method="post">
                 <input type="text" name="email" id="email" placeholder="E-mail">
                 <input type="password" name="senha" id="senha" placeholder="Senha">
                 <button type="submit">Entrar</button>
@@ -79,5 +79,6 @@ if (isset($_POST["email"]) && isset($_POST["senha"])) {
         </div>
     </div>
 </body>
+
 
 </html>
